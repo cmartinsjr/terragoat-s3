@@ -9,8 +9,10 @@ resource "aws_s3_bucket" "data" {
   # bucket does not have versioning
   bucket = "${local.resource_prefix.value}-data"
   tags = {
-    owner = "cmartinsjr_paloaltonetworks_com"
+    owner     = "cmartinsjr_paloaltonetworks_com"
     yor_trace = "d6240d06-c35e-414a-b363-7052a999c6ee"
+    email     = "dmensah"
+    git_repo  = "terragoat-s3"
   }
 }
 resource "aws_s3_bucket_public_access_block" "data" {
